@@ -30,7 +30,7 @@
         border: none;
         border-radius: 5px;
       }
-      td .delete {
+      td .clear {
         background-color: red;
       }
       input[type="button"]:active {
@@ -41,21 +41,29 @@
       }
 
       #result {
-        padding: 30px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        height: 60px;
+        width: 270px;
+        padding-left: 20px;
         font-size: 24px;
         font-weight: bold;
-        border: none;
         border-radius: 5px;
         border: 2px solid black;
+      }
+      #result::placeholder {
+        color: #999;
+        font-size: 24px;
       }
     </style>
     <!-- Create table -->
     <table id="calculator">
       <tr>
         <td colspan="3">
-          <p id="result"></p>
+          <p id="result" placeholder="0"></p>
         </td>
-        <td><input type="button" value="c" class="delete" /></td>
+        <td><input type="button" value="c" class="clear" /></td>
       </tr>
 
       <tr>
@@ -79,7 +87,7 @@
       <tr>
         <td><input class="btns-class" type="button" value="0" /></td>
         <td><input class="btns-class" type="button" value="." /></td>
-        <td><input class="operator-class" type="button" value="=" /></td>
+        <td><input class="solution-class" type="button" value="=" /></td>
         <td><input class="operator-class" type="button" value="+" /></td>
       </tr>
     </table>
